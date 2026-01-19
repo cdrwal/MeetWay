@@ -1,0 +1,35 @@
+/* App specific styles if needed */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.marker-user {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.marker-midpoint {
+  cursor: grab;
+  z-index: 10;
+}
+
+.marker-midpoint:active {
+  cursor: grabbing;
+}
+
+.venue-popup .mapboxgl-popup-content {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.venue-popup .mapboxgl-popup-tip {
+  border-top-color: rgba(15, 23, 42, 0.95);
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #020617;
+  --bg-card: rgba(15, 23, 42, 0.85); /* Slightly more generic opacity */
+  --bg-input: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --accent: #10b981;
+  --danger: #ef4444;
+  --border-light: rgba(255, 255, 255, 0.08);
+  
+  --font-main: 'Outfit', sans-serif;
+  
+  --glass-blur: 20px;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  
+  --sidebar-width: 380px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* Glass Component Class */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-right: 1px solid var(--border-light);
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: var(--text-main);
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Mapbox Overrides */
+.mapboxgl-ctrl-logo, .mapboxgl-ctrl-attrib {
+  display: none !important; /* Optional: Cleaner look, though check license terms. Usually better to keep but style it. I'll keep default but maybe small. */
+}
+/* Revert hiding attribution for now to be safe, just style geocoder */
+.mapboxgl-ctrl-geocoder {
+  background-color: var(--bg-input) !important;
+  color: white !important;
+  font-family: var(--font-main) !important;
+  box-shadow: none !important;
+  border: 1px solid var(--border-light);
+  width: 100% !important;
+  max-width: none !important;
+}
+.mapboxgl-ctrl-geocoder--input {
+  color: white !important;
+  padding-left: 35px !important;
+}
+.mapboxgl-ctrl-geocoder--icon-search {
+  fill: var(--text-muted) !important;
+}
+.mapboxgl-ctrl-geocoder .suggestions {
+  background-color: var(--bg-input) !important;
+  border: 1px solid var(--border-light);
+}
+.mapboxgl-ctrl-geocoder .suggestions > li > a {
+  color: var(--text-main) !important;
+}
+.mapboxgl-ctrl-geocoder .suggestions > li > a:hover {
+  background-color: #334155 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.3);
+}
