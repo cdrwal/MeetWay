@@ -1,5 +1,7 @@
-# React + Vite
+# Meetway
+A location-based service that calculates optimal meeting points between two or more users. Utilizes geographical midpoints and point-of-interest data to minimize total travel time.
 
+## Project Setup
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
