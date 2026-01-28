@@ -1,4 +1,4 @@
-# Meetway
+# MeetWay
 A location-based service that calculates optimal meeting points between two or more users. Utilizes geographical midpoints and point-of-interest data to minimize total travel time.
 
 ## Project Setup
